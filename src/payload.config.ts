@@ -1,5 +1,6 @@
 import { buildConfig } from 'payload/config';
 import path from 'path';
+import Home from './globals/Home';
 import Categories from './collections/Categories';
 import Posts from './collections/Posts';
 import Tags from './collections/Tags';
@@ -12,11 +13,14 @@ export default buildConfig({
     user: Users.slug,
   },
   collections: [
-    Categories,
     Posts,
+    Categories,
     Tags,
     Users,
     Media,
+  ],
+  globals: [
+    Home
   ],
   typescript: {
     outputFile: path.resolve(__dirname, 'payload-types.ts')

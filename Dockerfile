@@ -1,4 +1,4 @@
-FROM node:18.8-alpine as base
+FROM node:18.8-bullseye as base
 
 FROM base as builder
 
@@ -6,8 +6,9 @@ WORKDIR /home/node/app
 COPY package*.json ./
 
 COPY . .
-RUN npm install
-RUN npm run build
+RUN yarn install
+RUN yarn run build
+
 
 FROM base as runtime
 
@@ -17,7 +18,7 @@ ENV PAYLOAD_CONFIG_PATH=dist/payload.config.js
 WORKDIR /home/node/app
 COPY package*.json  ./
 
-RUN npm install --production
+RUN yarn install --production
 COPY --from=builder /home/node/app/dist ./dist
 COPY --from=builder /home/node/app/build ./build
 

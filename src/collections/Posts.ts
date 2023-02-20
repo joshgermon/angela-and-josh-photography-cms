@@ -15,11 +15,6 @@ const Posts: CollectionConfig = {
       type: 'text',
     },
     {
-      name: 'author',
-      type: 'relationship',
-      relationTo: 'users',
-    },
-    {
       name: 'publishedDate',
       type: 'date',
     },
