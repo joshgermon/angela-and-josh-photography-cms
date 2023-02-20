@@ -19,6 +19,8 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GHCR_TOKEN }}
+      - name: Debug
+        run: echo "ghcr.io/${{ github.repository }}/payload:latest"
       - name: Build Docker image
         uses: docker/build-push-action@v2
         with:
