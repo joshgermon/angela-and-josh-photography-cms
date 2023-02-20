@@ -1,11 +1,8 @@
 version: '3'
 
 services:
-
   payload:
-    build:
-      context: .
-      target: runtime
+    image: ghcr.io/joshgermon/angela-and-josh-photography-cms/payload:latest
     ports:
       - "3000:3000"
     depends_on:
