@@ -6,7 +6,7 @@ WORKDIR /home/node/app
 COPY package*.json ./
 
 COPY . .
-RUN yarn install
+RUN yarn install --network-timeout 1000000
 RUN yarn build
 
 
@@ -19,7 +19,7 @@ ENV SERVER_URL="https://admin.angelajoshphotography.com.au"
 WORKDIR /home/node/app
 COPY package*.json  ./
 
-RUN yarn install --production
+RUN yarn install --network-timeout 1000000 --production
 COPY --from=builder /home/node/app/dist ./dist
 COPY --from=builder /home/node/app/build ./build
 
