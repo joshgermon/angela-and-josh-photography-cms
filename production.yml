@@ -4,12 +4,12 @@ services:
   payload:
     image: ghcr.io/joshgermon/angela-and-josh-photography-cms/payload:latest
     ports:
-      - "3000:3000"
+      - "443:443"
     depends_on:
       - mongo
     environment:
       MONGODB_URI: mongodb://mongo:27017/payload
-      PORT: 3000
+      PORT: 443
       NODE_ENV: production
       PAYLOAD_SECRET: 8c8bd8d29492741cf9a42f41
 
