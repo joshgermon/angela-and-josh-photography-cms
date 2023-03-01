@@ -14,7 +14,7 @@ FROM base as runtime
 
 ENV NODE_ENV=production
 ENV PAYLOAD_CONFIG_PATH=dist/payload.config.js
-ENV SERVER_URL="https://admin.angelajoshphotography.com.au"
+ENV SERVER_URL="https://cms.angelajoshphotography.com.au"
 
 WORKDIR /home/node/app
 COPY package*.json  ./
