@@ -9,16 +9,16 @@ const Media: CollectionConfig = {
     adminThumbnail: 'thumbnail',
     imageSizes: [
       {
-        height: 400,
-        width: 400,
+        height: 450,
+        width: 450,
         crop: 'center',
         name: 'thumbnail',
       },
       {
-        width: 900,
-        height: 450,
+        width: 860,
+        height: 645,
         crop: 'center',
-        name: 'sixteenByNineMedium',
+        name: 'portraitMedium',
       },
     ],
   },
