@@ -70,6 +70,22 @@ const Home: GlobalConfig = {
 				},
 			],
 		},
+		{
+			name: 'additionalItems',
+			type: 'group',
+			fields: [
+				{
+					name: 'showPromoBar',
+					type: 'checkbox',
+					label: 'Show Promo Bar?',
+      				defaultValue: false,
+				},
+				{
+					name: 'promoBarText',
+					type: 'text'
+				},
+			],
+		},
 	],
 };
 export default Home;
