@@ -13,7 +13,8 @@ ENV NODE_ENV=production
 ENV PAYLOAD_CONFIG_PATH=dist/payload.config.js
 ENV SERVER_URL="https://cms.angelajoshphotography.com.au"
 WORKDIR /home/node/app
-COPY package*.json  ./
+COPY package.json  ./
+COPY yarn.lock  ./
 RUN yarn install --frozen-lockfile --network-timeout 1000000 --production
 COPY --from=builder /home/node/app/dist ./dist
 COPY --from=builder /home/node/app/build ./build
