@@ -15,8 +15,8 @@ const Media: CollectionConfig = {
         name: 'thumbnail',
       },
       {
-        width: 885,
-        height: 650,
+        width: 650,
+        height: 885,
         crop: 'center',
         name: 'portraitMedium',
       },
