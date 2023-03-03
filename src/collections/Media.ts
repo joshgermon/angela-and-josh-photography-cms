@@ -38,9 +38,18 @@ const Media: CollectionConfig = {
         crop: 'center',
         name: 'hero',
       },
+      {
+        width: 3840,
+        height: 2160,
+        crop: 'center',
+        name: 'hero4k',
+      },
     ],
   },
   fields: [],
+  access: {
+    read: () => true,
+  }
 };
 
 export default Media;
